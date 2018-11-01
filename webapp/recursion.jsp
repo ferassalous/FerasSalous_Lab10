@@ -166,7 +166,7 @@
 
 	    //TODO
         }
-        return  1 + branchingFactor *nnaryTreeSize(branchingFactor, height-1);
+        return  1 + branchingFactor * nnaryTreeSize(branchingFactor, height-1);
         
 
         //TODO
@@ -182,7 +182,17 @@
      */
     public int treeSum(Tree tree)
     {
-        return 0; // still need to do.
+       int count = 0;
+       
+       for( Tree children : tree.getChildren())
+       {
+           count += treeSum(children);
+           
+           
+       }
+       return count;
+       
+        
         //TODO
     }
 
