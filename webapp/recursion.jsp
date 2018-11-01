@@ -109,13 +109,15 @@
 
         public Tree(int value)
         {
+            this.value = value;
+            children = new ArrayList<Tree>();
 
             //TODO
         }
 
         public int getValue()
         {
-            return 0;
+            return value;
 
             //TODO
         }
@@ -130,6 +132,8 @@
         public void add(Tree child)
         {
             //TODO
+            children.add(child);
+
         }
     }
 
@@ -158,8 +162,13 @@
     {
         if (height == 1)
         {
-            //TODO
+            return 1;
+
+	    //TODO
         }
+        return  1 + branchingFactor *nnaryTreeSize(branchingFactor, height-1);
+        
+
         //TODO
     }
 
@@ -173,6 +182,7 @@
      */
     public int treeSum(Tree tree)
     {
+        return 0; // still need to do.
         //TODO
     }
 
